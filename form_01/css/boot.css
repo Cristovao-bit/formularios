@@ -1,0 +1,225 @@
+/* 
+    Created on : 04/01/2019, 11:03:56
+    Author     : ML - Manutenção Lira
+*/
+
+:root{
+    --red: #eb5463;
+    --red_h: #f5b945;
+    --red_l: #fbd277;
+    
+    --teal_darken: #00796b;
+    --teal_darken_h: #00695c;
+    --teal_darken_l: #00897b;
+    
+    --blue_grey_darken: #37474f;
+    --blue_grey_darken_h: #263238;
+    --blue_grey_darken_l: #455a64;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', tahoma, arial, sans-serif;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    background: linear-gradient(rgba(38, 128, 101, 0.9), rgba(52, 177, 140, 0.9));
+}
+
+.form{
+    width: 500px;
+    margin: 30px auto;
+    text-align: center;
+    position: relative;
+}
+
+.form h2{
+    width: 100%;
+    color: #090;
+    text-align: left;
+    margin-bottom: 3%;
+}
+
+.form h3{
+    width: 100%;
+    color: #333;
+    font-size: 1.2em;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+.form fieldset{
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    /*horizontal/vertical/cor*/
+    box-shadow: 0 0 15px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: 0 0 15px 1px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 15px 1px rgba(0,0,0,0.4);
+    padding: 20px 30px;
+    width: 80%;
+    margin: 0 10%;
+    position: absolute;
+}
+
+.form fieldset:not(:first-of-type){
+    display: none;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #090;
+    border: 1px solid rgba(38, 128, 101, 0.9);
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    /*Tirar a border do formúlario ao clickar nela*/
+    outline: none;
+}
+
+.form input[type="submit"],
+.form input[type="button"]{
+    float: left;
+    margin-right: 5%;
+    outline: none;
+}
+
+.form .progress{
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+}
+
+.form .progress li{
+    list-style-type: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    float: left;
+    width: 33.33%;
+    position: relative;
+}
+
+.form .progress li:before{
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    display: block;
+    line-height: 20px;
+    background: #fff;
+    color: #333;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin: 0 auto 10px auto;
+}
+
+.form .progress li:after{
+    content: '';
+    width: 100%;
+    background: #fff;
+    height: 2px;
+    position: absolute;
+    top: 9px;
+    left: -50%;
+    z-index: -1;
+}
+
+.form .progress li:first-child:after{
+    content: none;
+}
+
+.form .progress li.active:before, .form .progress li.active:after{
+    background: rgba(40, 208, 141, 0.9);
+    color: #fff;
+    text-shadow: 0 1px 0;
+}
+
+/*Mensagem*/
+.trigger-error{
+    width: 390px;
+    margin: 30px auto 0;
+    padding: 5px;
+    text-shadow: 1px 1px rgba(0,0,0,0.3);
+    color: #333;
+    background: rgba(238, 249, 113, 0.9);
+    border: 1px solid rgba(222, 239, 10, 0.9);
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.trigger-success{
+    width: 390px;
+    margin: 30px auto 0;
+    padding: 5px;
+    text-shadow: 1px 1px rgba(0,0,0,0.3);
+    color: #fff;
+    background: #00796b;
+    border: 1px solid #00695c;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+/*BOTÕES*/
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: #888;
+    border: none;
+    font-size: 1em;
+    font-weight: normal;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 3px 7px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 3px 7px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.btn:hover{
+    color: #fff;
+    background: #666;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+    -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+/*BOTÕES: tamanho*/
+.btn-small{
+    font-size: 0.875em;
+}
+
+.btn-big{
+    font-size: 1.275em;
+}
+
+/*BOTÕES: cores*/
+.btn-black{
+    color: #fff;
+    background: #00796b;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.btn-black:hover{
+    color: #fff;
+    background: #00695c;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}

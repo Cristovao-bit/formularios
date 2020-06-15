@@ -1,0 +1,86 @@
+/* 
+    Created on : 31/01/2019, 11:53:51
+    Author     : ML - Manutenção Lira
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{background: #fbfbfb;}
+b{font-weight: 700;}
+ul, ol{list-style: none;}
+a{text-decoration: none;}
+img{vertical-align: middle;}
+
+/*Pequena alteração nos icones*/
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    position: relative;
+    top: .125em;
+}
+
+.container{max-width: 1300px; width: 90%; margin: 0 auto; padding: 40px 0;}
+.font-zero{font-size: 0em !important;}
+.section-title{width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;}
+.section-title::after{content: ''; width: 100px; display: block; border-bottom: 3px solid #ccc;}
+.section-title h1{font-size: 1.5em; font-weight: 700; margin-bottom: 3px;}
+.section-title .tagline{margin-bottom: 8px;}
+.bg-black{color: #fff; background: #000;}
+.radius-five{border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
+.circle{border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%;}
+.btn{display: inline-block; font-size: 0.9em; padding: 10px 20px; color: #fff; background: #888;}
+.btn:hover{background: #000;}
+.btn-yellow{background: #ffd600; box-shadow: 0 3px 7px rgba(0,0,0,0.5); -moz-box-shadow: 0 3px 7px rgba(0,0,0,0.5); -webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.5);}
+.btn-yellow:hover{background: #fbc02d; box-shadow: 0 0 0 rgba(0,0,0,0); -moz-box-shadow: 0 0 0 rgba(0,0,0,0); -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);}
+
+.main_footer_content .container{display: flex; justify-content: space-between; align-items: stretch;}
+.main_footer_content .section-title{padding-top: 40px;}
+.main_footer_content .section-title::after{border-bottom: 3px solid #fff;}
+.main_email{width: 40%;}
+.main_email .bloc_form{display: flex; justify-content: center; align-items: stretch;}
+.main_email .bloc_form .inputBox{position: relative;}
+.main_email .bloc_form .inputBox input{width: 95%; padding: 20px 0; border: none; border-bottom: 1px solid #fff; color: #fff; background: transparent;}
+.main_email .bloc_form .inputBox span{position: absolute; top: -14px; left: 0; font-size: 0.9em; transition: 0.5s;}
+.main_email .bloc_form .inputBox input:focus ~ span{top: -16px; font-size: 0.7em; color: #fbc02d;}
+.main_email .bloc_form .inputBox input:focus{border-bottom: 1px solid #fbc02d;}
+.main_email .bloc_form_textarea .inputBox{position: relative;}
+.main_email .bloc_form_textarea .inputBox textarea{width: 100%; padding: 20px 0; border: none; border-bottom: 1px solid #fff; color: #fff; background: transparent;}
+.main_email .bloc_form_textarea .inputBox span{position: absolute; top: -55px; left: 0; font-size: 0.9em; transition: 0.5s;}
+.main_email .bloc_form_textarea .inputBox textarea:focus ~ span{top: -57px; font-size: 0.7em; color: #fbc02d;}
+.main_email .bloc_form_textarea .inputBox textarea:focus{border-bottom: 1px solid #fbc02d;}
+.main_email .bloc_form_btn{display: flex; justify-content: space-between;}
+.main_email .bloc_form_btn .inputBtn{flex-basis: 49%; margin-top: 10px; border: none; color: #fff; background: #ffd600; transition: 0.5s;}
+.main_email .bloc_form_btn .inputBtn:hover{background: #fbc02d;}
+.main_map{width: 25%; min-height: 250px;}
+.main_map iframe{width: 100%; min-height: 250px; border: 3px solid #fff;}
+.main_contact li{margin-bottom: 5px; font-size: 0.9em;}
+.main_contact .contact_redes{display: flex; flex-basis: 100%; justify-content: center; align-items: center; margin-top: 30px; padding: 20px 0;}
+.main_contact .contact_redes li{margin-right: 15px;}
+.main_contact .contact_redes li:last-child{margin-right: 0;}
+.main_contact .contact_redes li a{width: 30px; height: 30px; display: block; padding: 7px; color: #000; background: #fff; transition: 0.5s;}
+.main_contact .contact_redes li:nth-child(1):hover a{color: #fff; background: #3B5999;}
+.main_contact .contact_redes li:nth-child(2):hover a{color: #fff; background: #e4405f;}
+.main_contact .contact_redes li:nth-child(3):hover a{color: #fff; background: #55acee;}
+.main_contact .contact_redes li:nth-child(4):hover a{color: #fff; background: #dd4b39;}
+.main_contact .contact_redes li:nth-child(5):hover a{color: #fff; background: #0077b5;}
+
+@media (max-width: 1000px){
+    .main_footer_content .container{flex-direction: column; justify-content: center; align-items: center;}
+    .main_email{width: 70%; margin: 0 auto;}
+    .main_map{width: 70%; margin: 20px auto; min-height: 250px;}
+    .main_contact{text-align: center;}
+}
+
+@media (max-width: 700px){
+    .main_email{width: 96%; margin: 0 auto;}
+    .main_map{width: 96%; margin: 20px auto; min-height: 250px;}
+}

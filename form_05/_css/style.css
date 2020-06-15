@@ -1,0 +1,155 @@
+/* 
+    Created on : 14/01/2019, 19:24:29
+    Author     : ML - Manutenção Lira
+*/
+
+.form_bg{
+    color: #fff;
+    background: #000;
+    display: flex;
+}
+
+.form_title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.form_title::after{
+    content: '';
+    display: block;
+    width: 350px;
+    border-bottom: 1px solid #fff;
+}
+
+.form_title h1{
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form_title p{
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.form_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_location li{
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.form_location ul{
+    display: flex;
+    padding: 20px 30px;
+}
+
+.form_location ul li{
+    margin-right: 15px;
+}
+
+.form_location li a{
+    width: 30px;
+    height: 30px;
+    display: block;
+    padding: 7px;
+    color: #000;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.form_location ul li:nth-child(1):hover a{
+    color: #fff;
+    background: #3b5999;
+}
+
+.form_location ul li:nth-child(2):hover a{
+    color: #fff;
+    background: #e4405f;
+}
+
+.form_location ul li:nth-child(3):hover a{
+    color: #fff;
+    background: #55acee;
+}
+
+.form_location ul li:nth-child(4):hover a{
+    color: #fff;
+    background: #dd4b39;
+}
+
+.form_location ul li:nth-child(5):hover a{
+    color: #fff;
+    background: #0077B5;
+}
+
+.form_contact_content{
+   width: 100%;
+   display: flex;
+}
+
+.form_contact_content .inputBox,
+.form_contact_content_masseger .inputBox{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form_contact_content .inputBox input{
+    width: 250px;
+    margin-right: 10px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.form_contact_content_masseger .inputBox textarea{
+    width: 100%;
+    margin-right: 10px;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.form_contact_content .inputBox span,
+.form_contact_content_masseger .inputBox span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.9em;
+    transition: 0.5s;
+}
+
+.form_contact_content .inputBox input:focus ~ span,
+.form_contact_content_masseger .inputBox textarea:focus ~ span{
+    top: -10px;
+    font-size: 0.7em;
+    color: #f1c40f;
+}
+
+.form_contact_content .inputBox input:focus,
+.form_contact_content_masseger .inputBox textarea:focus{
+    border-bottom: 1px solid #f1c40f;
+}
+
+.inputBtn{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #f1c40f;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
